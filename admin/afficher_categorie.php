@@ -25,13 +25,13 @@
                     <h6><?= $row['libelle'] ?></h6>
                 </a>
                 <div class="cat_box_icon">
-                    <a href="../php/modifier_categorie.php?id=<?= $row['id_categorie'] ?>"><i class='bx bxs-edit'></i></a>
-                    <a href="../php/supprimer_categorie.php?id=<?= $row['id_categorie'] ?>"><i class='bx bxs-trash-alt'></i></a>
+                    <a href="./admin/modifier_categorie.php?id=<?= $row['id_categorie'] ?>"><i class='bx bxs-edit'></i></a>
+                    <a href="./admin/supprimer_categorie.php?id=<?= $row['id_categorie'] ?>"><i class='bx bxs-trash-alt'></i></a>
                 </div>
             </div>
     <?php
         }
     }
     ?>
-    <a href="../php/ajouter_categorie.php" class="ajouter_cat"><i class='bx bx-plus-circle bx-sm add-cart'></i>Ajouter</a>
+    <a href="./admin/ajouter_categorie.php" class="ajouter_cat"><i class='bx bx-plus-circle bx-sm add-cart'></i>Ajouter</a>
 </div>

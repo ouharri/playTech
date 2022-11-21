@@ -35,17 +35,15 @@ header {
   z-index: 999;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 80px;
+  padding: 20px 50px;
   background: #e3e6f3;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
 }
-nav{
+
+nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-nav .nam{
-  font-size: 10px;
 }
 nav ul {
   display: flex;
@@ -62,17 +60,92 @@ nav li a {
   transition: 0.3 ease;
 }
 nav li a:hover,
-nav li a.active{
+nav li a.active {
   color: var(--main-color);
 }
 nav li a:hover::after,
-nav li a.active::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: var(--main-color);
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
+nav li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: var(--main-color);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-nav i {
+  color: var(--text-color);
+  transition: 0.3 ease;
+  margin-left: 10px;
+}
+.right-nav i:hover,
+.right-nav i.active {
+  color: var(--main-color);
+}
+.loginD .nam {
+  padding: 0 2px;
+  font-size: 12px;
+}
+.loginD li i {
+  margin-right: 2px;
+  margin-left: 0px;
+  color: var(--bg-color);
+}
+.loginD a {
+  font-size: 12px;
+  padding: 0;
+  color: var(--main-color);
+}
+.loginD{
+  margin-left: 0;
+}
+.loginD {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-left: 30px;
+}
+#menU{
+  display: none;
+  cursor: pointer;
+}
+.open{
+  right: 0px;
 }
 
+@media (max-width: 799px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  nav li {
+    margin-bottom: 25px;
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+    justify-content: flex-start; */
+    position: fixed;
+    top: 60px;
+    right: -300px;
+    height: calc(100vh - 60px);
+    width: 300px;
+    background-color: #e3e6f3;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.25);
+    padding: 80px 0 0 10px;
+  }
+  #menU{
+    display: block;
+  }
+}

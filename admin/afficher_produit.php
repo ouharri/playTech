@@ -16,7 +16,7 @@ if ($id != 0) {
         <div class="mainText" id="platType">
             <div class="add_prod">
                 <h2><?= $row['libelle'] ?></h2>
-                <h2 class="add-ntn"><a href="../php/ajouter_produit.php?id=<?= $row['id_categorie'] ?>">Ajouter <i class='bx bx-plus-circle add-cart add-cart-one'></i></a></h2>
+                <h2 class="add-ntn"><a href="./admin/ajouter_produit.php?id=<?= $row['id_categorie'] ?>">Ajouter <i class='bx bx-plus-circle add-cart add-cart-one'></i></a></h2>
             </div>
             <p><?= $row['desc_categorie'] ?></p>
         </div>
@@ -29,7 +29,7 @@ if ($id != 0) {
         <div class="mainText" id="platType">
             <div class="add_prod">
                 <h2>Nos produit</h2>
-                <h2 class="add-ntn"><a href="../php/ajouter_produit.php?id=0">Ajouter <i class='bx bx-plus-circle add-cart add-cart-one'></i></a></h2>
+                <h2 class="add-ntn"><a href="./admin/ajouter_produit.php?id=0">Ajouter <i class='bx bx-plus-circle add-cart add-cart-one'></i></a></h2>
             </div>
             <p>Vous trouver içi tous ce que vous vouler !</p>
         </div>
@@ -55,8 +55,8 @@ if ($id != 0) {
                     <p><?= $row['desc_produit'] ?></p>
                     <div class="foteerPlat">
                         <div class="addPlat">
-                            <a href="../php/modifier_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-edit'></i></a>
-                            <a href="../php/supprimer_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-trash-alt'></i></a>
+                            <a href="./admin/modifier_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-edit'></i></a>
+                            <a href="./admin/supprimer_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-trash-alt'></i></a>
                         </div>
                     </div>
                 </div>

@@ -215,6 +215,9 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  aspect-ratio: 1;
+  object-fit: cover;
+
 }
 label {
   position: relative;
@@ -293,7 +296,7 @@ input#add_img_input {
   color: green;
 }
 
-@media (max-width: 1740px) {
+/* @media (max-width: 1740px) {
   header {
     padding: 14px 2%;
   }
@@ -388,4 +391,4 @@ input#add_img_input {
   .home {
     height: auto;
   }
-}
+} */

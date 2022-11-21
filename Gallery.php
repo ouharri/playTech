@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style css link  -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">    
     <title>PlayTech</title>
 
     <!-- google font  link-->
@@ -28,14 +28,14 @@
 <body>
     <!-- header (nav bar) -->
     <?php
-    include_once "../component/header.php"
+    include_once "./component/header.php"
     ?>
 
     <section class="menu">
         <div class="categorie-gallery">
             <?php
             // connexion a la base de donné
-            include_once "../php/connection.php";
+            include_once "./admin/connection.php";
             // requette pour afficher la liste des CATEGORIE
             $req = mysqli_query($con, "SELECT * FROM categorie");
             if (mysqli_num_rows($req) == 0) {

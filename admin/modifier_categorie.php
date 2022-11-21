@@ -14,14 +14,20 @@
 <body>
     <?php
     require_once './connection.php';
+    // récupération de l'id de produit a partire de lien
+    $id = $_GET['id'];
+    //requête d'affichage
+    $sql = "SELECT * FROM categorie WHERE id_categorie = $id";
+    $req = mysqli_query($con, $sql);
+    $row = mysqli_fetch_assoc($req);
+
     //vérifier que le bouton ajouter a bien été cliqué
     if (isset($_POST['button'])) {
         //extraction des informations envoyé dans des variables par la methode POST
         extract($_POST);
         if (isset($nom) && isset($desc)) {
             //requête d'ajout
-            $sql = "INSERT INTO `categorie` (`libelle`, `desc_categorie`, `svg_icon_categorie`) VALUES 
-            ('$nom','$desc','$icon')";
+            $sql = "UPDATE `categorie` SET `libelle` = '$nom', `desc_categorie` = '$desc', `svg_icon_categorie` = '$icon' WHERE `categorie`.`id_categorie` = $id";
             $req = mysqli_query($con, $sql);
             if ($req) {
                 //si la requête a été effectuée avec succès , on fait une redirection
@@ -40,8 +46,8 @@
     }
     ?>
     <div class="form">
-        <a href="../html/gestion.php?id=0" class="back_btn"><i class='bx bx-arrow-back'></i></a>
-        <h2>Ajouter une categorie</h2>
+        <a href="../gestion.php?id=<?= $row['id_categorie'] ?>" class="back_btn"><i class='bx bx-arrow-back'></i></a>
+        <h2>Modifier une categorie</h2>
         <p class="erreur_message">
             <?php
             // si la variable message existe , affichons son contenu
@@ -52,12 +58,15 @@
         </p>
         <form enctype="multipart/form-data" action="" method="POST">
             <label>Nom</label>
-            <input type="text" name="nom">
+            <input type="text" name="nom" value="<?= $row['libelle'] ?>">
             <label>descrpiption</label>
-            <input type="text" name="desc">
+            <input type="text" name="desc" value="<?= $row['desc_categorie'] ?>">
             <label>logo<small> ( svg or icone )</small></label>
-            <input type="text" name="icon">
-            <input type="submit" value="Ajouter" name="button">
+            <div class="svg_update">
+                <textarea type="text" name="icon" value="<?= $row['svg_icon_categorie'] ?>"></textarea>
+                <?= $row['svg_icon_categorie'] ?>
+            </div>
+            <input type="submit" value="Modifier" name="button">
         </form>
     </div>
 </body>

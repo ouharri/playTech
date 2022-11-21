@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style css link  -->
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
     <title>PlayTech</title>
 
     <!-- google font  link-->
@@ -23,8 +23,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- boxicon link -->
-
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- main js link -->
+    <script src="./js/main.js?v=<?php echo time(); ?>"></script>
 
 
 </head>

@@ -1,3 +1,9 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['name'])) {
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style css link  -->
-    <link rel="stylesheet" href="../style/style.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
     <title>PlayTech</title>
 
     <!-- google font  link-->
@@ -26,16 +32,16 @@
 <body>
     <!-- header (nav bar) -->
     <?php
-    include_once "../component/header.php"
+    include_once "./component/header.php"
     ?>
 
     <section class="menu">
         <?php
-        include_once "../php/afficher_categorie.php"
+        include_once "./admin/afficher_categorie.php"
         ?>
 
         <?php
-        include_once('../php/afficher_produit.php');
+        include_once('./admin/afficher_produit.php');
         ?>
     </section>
 
@@ -44,3 +50,9 @@
 </body>
 
 </html>
+<?php 
+}else{
+     header("Location: ../index.php");
+     exit();
+}
+ ?>
