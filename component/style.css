@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none !important;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg-color: #363636;
+  --text-color: #1a1a1a;
+  --main-color: #0070d1;
+  --other-color: #363636;
+  --h1-font: 6rem;
+  --p-font: 1rem;
+}
+
+body {
+  /* background: radial-gradient(#f9d349, 20%, #d57e12); */
+  /* background-color: var(--bg-color); */
+  /* background: radial-gradient(50.53% 50.53% at 50.23% 49.47%, #414d59 0%, #1d2631 100%); */
+  /* background-color: #dadbd9; */
+  color: var(--text-color);
+}
+
+/* header start */
+
+header {
+  display: flex;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  z-index: 999;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.25);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .nam{
+  font-size: 10px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+}
+nav li {
+  padding: 0 20px;
+  position: relative;
+}
+nav li a {
+  color: var(--text-color);
+  transition: 0.3 ease;
+}
+nav li a:hover,
+nav li a.active{
+  color: var(--main-color);
+}
+nav li a:hover::after,
+nav li a.active::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: var(--main-color);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+

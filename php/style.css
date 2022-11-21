@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  background: #e3e6f3;
+}
+.Btn_add {
+  width: fit-content;
+  margin-bottom: 20px;
+  background-color: #0070d1;
+  padding: 5px 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-align: 0;
+  border-radius: 6px;
+  text-decoration: 0;
+}
+.Btn_add img {
+  margin-right: 5px;
+  height: 20px;
+}
+/*tableau*/
+table {
+  border-collapse: collapse;
+  color: #404040;
+}
+th {
+  font-size: 16px;
+  border-bottom: 3px solid #ffcb61;
+  padding: 5px 20px;
+  font-weight: 500;
+}
+td {
+  font-weight: 400;
+  padding: 5px 30px;
+  font-size: 14px;
+  text-align: center;
+}
+img {
+  height: 25px;
+}
+tr:nth-child(2n) {
+  background-color: #f6f8f8;
+}
+tr:nth-child(2n) td {
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+}
+/*Form CSS*/
+.form {
+  background-color: #f6f8f8;
+  padding: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+.form form {
+  display: flex;
+  width: 350px;
+  flex-direction: column;
+}
+.back_btn {
+  color: #0070d1;
+  text-decoration: 0;
+  display: flex;
+  align-items: center;
+}
+.back_btn img {
+  height: 16px;
+  margin-right: 5px;
+}
+h2 {
+  margin: 10px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.erreur_message {
+  color: red;
+  font-size: 12px;
+}
+label {
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+input {
+  padding: 5px;
+  border: 1px solid #999;
+  outline: 0;
+  margin-top: 1px;
+  height: 30px;
+}
+select {
+  height: 30px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border: 1px solid #ffcb61;
+}
+input[type="submit"] {
+  margin-top: 25px;
+  background-color: #0070d1;
+  border: 1px solid #0070d1;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+}
+input#add_img_input.none {
+  display: none;
+}
+.label_image img {
+  height: 80px;
+}
+.label_image i {
+  font-size: 50px;
+}
+.label_image {
+  border: solid #404040 1px;
+  padding: 10px;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 50% 40%;
+  gap: 20%;
+  align-items: center;
+}
+.svg_update {
+  display: grid;
+  grid-template-columns: 90% 8%;
+  gap: 2%;
+  align-items: center;
+}
+.svg_update textarea {
+  max-width: 100%;
+}
