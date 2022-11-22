@@ -1,7 +1,8 @@
 <style>
     <?php
     session_start();
-    include 'style.css'; ?>
+    include 'style.css';
+     ?>
     /* java-script link */
 </style>
 <header>
@@ -17,7 +18,7 @@
     </a>
     <nav id="nav-bar">
         <ul class="nav-bar">
-            <li><a class="active" href="./index.php">Home</a></li>
+            <li><a class="active" href="./home.php">Home</a></li>
             <li><a href="./gallery.php?id=0">Shop</a></li>
             <li><a href="About">About</a></li>
             <li><a href="Contact">Contact</a></li>
