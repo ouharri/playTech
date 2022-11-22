@@ -1,5 +1,8 @@
 <?php
 include_once "connection.php";
+include "./component/alertSupp.php";
+
+supp('supp',);
 
 // récupération de l'id de produit a partire de lien
 $id = $_GET['id'];
@@ -41,6 +44,7 @@ if ($id != 0) {
             // 
         } else {
             while ($row = mysqli_fetch_assoc($req)) {
+                supp('supp',$row['libelle_produit'],'#',"./admin/modifier_produit.php?id=$row['id_produit']");
             ?>
                 <div class="roW">
                     <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['img_produit']); ?>" alt="gg">
@@ -55,6 +59,9 @@ if ($id != 0) {
                     <p><?= $row['desc_produit'] ?></p>
                     <div class="foteerPlat">
                         <div class="addPlat">
+                            <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#supp">
+                            <i class='bx bxs-edit'></i>
+                            </a>
                             <a href="./admin/modifier_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-edit'></i></a>
                             <a href="./admin/supprimer_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-trash-alt'></i></a>
                         </div>

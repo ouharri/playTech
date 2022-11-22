@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php session_start(); ?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,16 +27,23 @@
         extract($_POST);
         if (isset($nom) && isset($desc)) {
             //requête d'ajout
-            $sql = "UPDATE `categorie` SET `libelle` = '$nom', `desc_categorie` = '$desc', `svg_icon_categorie` = '$icon' WHERE `categorie`.`id_categorie` = $id";
+            $sql = "UPDATE `categorie` SET `libelle` = " . "'" .  addslashes($nom) . "', `desc_categorie` = " . "'" .  addslashes($desc) . "', `svg_icon_categorie` = " . "'" .  addslashes($icon) . "' WHERE `categorie`.`id_categorie` = $id";
             $req = mysqli_query($con, $sql);
             if ($req) {
                 //si la requête a été effectuée avec succès , on fait une redirection
-                echo `
-                    
-                `;
-                header("location:../html/gestion.php?id=0");
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("categorie ", "bien modifier!", "success");
+                </script>';
+                header("location:../gestion.php?id=0");
             } else {
                 //si non
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("Hello world!");
+                </script>';
                 $message = "produit non ajouté";
             }
         } else {
@@ -63,8 +70,8 @@
             <input type="text" name="desc" value="<?= $row['desc_categorie'] ?>">
             <label>logo<small> ( svg or icone )</small></label>
             <div class="svg_update">
-                <textarea type="text" name="icon" value="<?= $row['svg_icon_categorie'] ?>"></textarea>
-                <?= $row['svg_icon_categorie'] ?>
+                <textarea type="text" name="icon" value="<?= $row['svg_icon_categorie']?>"></textarea>
+                <?=$row['svg_icon_categorie']?>
             </div>
             <input type="submit" value="Modifier" name="button">
         </form>

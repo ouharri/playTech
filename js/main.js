@@ -1,15 +1,16 @@
-let menu = document.getElementById('menU');
-let navBar = document.getElementById('nav-bar');
-// menu.onclick = () => {
-//     menu.classList.toggle('bx-x');
-//     navBar.classList.toggle('open');
-// };
+const navBar = document.getElementById('nav-bar');
+const menu = document.getElementById('menU');
+    menu.onclick = () => {
+        menu.classList.toggle('bx-x');
+        navBar.classList.toggle('open');
+    };
+// if(menu){
+//     menu.addEventListener('click',() => {
+//         navBar.classList.add('open');
+//         menu.classList.toggle('bx-x');
+//     }
+//     )
+// }
 
-if(menu){
-    menu.addEventListener('click',() => {
-        navBar.classList.add('open');
-    }
-    )
-}
 
-console.log("hhhh");
+

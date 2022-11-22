@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,9 +9,7 @@
     <title>Ajouter</title>
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- boxicon link -->
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
 </head>
 
 <body>
@@ -23,7 +22,6 @@
     $sql = "SELECT * FROM `produit` WHERE id_produit = $id";
     $req = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($req);
-
     //vérifier que le bouton ajouter a bien été cliqué
     if (isset($_POST['button'])) {
         //extraction des informations envoyé dans des variables par la methode POST
@@ -39,23 +37,27 @@
                 $sql = "UPDATE `produit` SET `id_categorie` = $categorie, `libelle_produit` = '$nom', `price_produit` = '$prix' , `quantite_produit` = '$quantite', `desc_produit` = '$desc' WHERE `produit`.`id_produit` = $id";
             }
             $req = mysqli_query($con, $sql);
-
             if ($req) {
                 //si la requête a été effectuée avec succès , on fait une redirection
-                echo `
-                    
-                `;
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("produit ", "bien modifier!", "success");
+                </script>';
                 header("location:../gestion.php?id=$categorie");
             } else {
                 //si non
-                $message = "prodfuit non ajouté";
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("Ereure produit non modifier!");                </script>';
+                $message = "prodfuit non modifier";
             }
         } else {
             //si non
             $message = "Veuillez remplir tous les champs !";
         }
     }
-
     ?>
     <div class="form">
         <a href="../gestion.php?id=<?= $row['id_categorie'] ?>" class="back_btn"><i class='bx bx-arrow-back'></i></a>
@@ -67,7 +69,6 @@
                 echo $message;
             }
             ?>
-
         </p>
         <form action="#" method="POST" enctype="multipart/form-data">
             <label>Nom</label>
@@ -83,12 +84,10 @@
                 <?php
                 // requette pour afficher la liste des CATEGORIE
                 $reQ = mysqli_query($con, "select * FROM categorie");
-
                 if (mysqli_num_rows($reQ) == 0) {
                     // 
                 } else {
                     while ($roW = mysqli_fetch_assoc($reQ)) {
-
                         if ($roW['id_categorie'] != $row['id_categorie']) {
                 ?>
                             <option value="<?= $roW['id_categorie'] ?>"><?= $roW['libelle'] ?></option>

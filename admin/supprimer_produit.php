@@ -9,7 +9,7 @@ $id = $_GET['id'];
 $sql = "SELECT * FROM produit WHERE id_produit = $id";
 $req = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($req);
-$id_cat=$row['id_categorie'];
+$id_cat = $row['id_categorie'];
 
 //requette de suppression 
 $req = mysqli_query($con, "DELETE FROM produit WHERE id_produit = $id");

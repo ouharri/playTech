@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,10 @@
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- boxicon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
+
 <body>
     <?php
     require_once './connection.php';
@@ -23,16 +27,24 @@
             $image = addslashes(file_get_contents($_FILES['image']['tmp_name']));
             //requête d'ajout
             $sql = "INSERT INTO produit(id_categorie, libelle_produit, quantite_produit, price_produit, img_produit, desc_produit) VALUES 
-            ($categorie,'$nom',$quantite,$prix," . "'" .  $image . "','$desc')";
+            ('" .  addslashes($categorie) . "', " . "'" .  addslashes($nom) . "' ,$quantite,$prix," . "'" .  $image . "'," . "'" .  addslashes($desc) . "')";
             $req = mysqli_query($con, $sql);
             if ($req) {
+                // sleep(3);
                 //si la requête a été effectuée avec succès , on fait une redirection
-                echo `
-                    
-                `;
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("produit ", "bien ajouter!", "success");
+                </script>';
                 header("location:../gestion.php?id=$categorie");
             } else {
                 //si non
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("ereure! produit  non ajouter");
+                </script>';
                 $message = "produit non ajouté";
             }
         } else {
@@ -42,7 +54,7 @@
     }
     ?>
     <div class="form">
-        <a href="./gestion.php?id=<?= $id ?>" class="back_btn"><i class='bx bx-arrow-back'></i></a>
+        <a href="../gestion.php?id=<?= $id ?>" class="back_btn"><i class='bx bx-arrow-back'></i></a>
         <h2>Ajouter un produit</h2>
         <p class="erreur_message">
             <?php
@@ -72,11 +84,11 @@
                     while ($roW = mysqli_fetch_assoc($reQ)) {
                         if ($id != $roW['id_categorie']) {
                 ?>
-                            <option value="<?= $roW['id_categorie'] ?>"><?= $roW['libelle'] ?></option>
-                        <?php
+                <option value="<?= $roW['id_categorie'] ?>"><?= $roW['libelle'] ?></option>
+                <?php
                         } else {
                         ?>
-                            <option value="<?= $roW['id_categorie'] ?>" selected><?= $roW['libelle'] ?> </option>
+                <option value="<?= $roW['id_categorie'] ?>" selected><?= $roW['libelle'] ?> </option>
                 <?php
                         }
                     }
@@ -89,4 +101,8 @@
         </form>
     </div>
 </body>
+<?php
+include_once "../component/script.php"
+?>
+
 </html>

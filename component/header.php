@@ -2,6 +2,7 @@
     <?php
     session_start();
     include 'style.css'; ?>
+    /* java-script link */
 </style>
 <header>
     <a href="#" class="logo">
@@ -49,6 +50,6 @@
         }
         ?>
         <li><a href="./html/gestion.html"><i class='bx bx-shopping-bag' style="font-size: 30px;"></i></a></li>
-        <li id="menU"><i class='bx bx-menu bx-md'></i></li>
+        <li><i id="menU" class='bx bx-menu bx-md'></i></li>
     </div>
 </header>

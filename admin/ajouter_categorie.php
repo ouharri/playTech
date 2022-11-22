@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,16 +22,23 @@
         if (isset($nom) && isset($desc)) {
             //requête d'ajout
             $sql = "INSERT INTO `categorie` (`libelle`, `desc_categorie`, `svg_icon_categorie`) VALUES 
-            ('$nom','$desc','$icon')";
+            ('" .  addslashes($nom) . "'," . "'" .  addslashes($desc) . "'," . "'" .  addslashes($icon) . "')";
             $req = mysqli_query($con, $sql);
             if ($req) {
                 //si la requête a été effectuée avec succès , on fait une redirection
-                echo `
-                    
-                `;
-                header("location:./gestion.php?id=0");
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("categorie", "bien ajouter!", "success");
+                </script>';
+                header("location:../gestion.php?id=0");
             } else {
                 //si non
+                $_SESSION['ajouterpd'] = '
+                <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                <script type="text/javascript">
+                swal("Ereure categorie non ajouter!");
+                </script>';
                 $message = "produit non ajouté";
             }
         } else {

@@ -1,6 +1,5 @@
 <div class="categorie-gallery">
     <?php
-
     // connexion a la base de donné
     include_once "connection.php";
 

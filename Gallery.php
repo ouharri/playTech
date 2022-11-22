@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style css link  -->
-    <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">    
+    <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
     <title>PlayTech</title>
 
     <!-- google font  link-->
@@ -431,17 +431,11 @@
                     </div>
                 </div>
             </div>
-
-
-
         </div>
-
     </section>
-
-
-
-    <!-- java-script link -->
-    <script src="./java_script/main.js"></script>
+    <?php
+    include_once "./component/script.php"
+    ?>
 </body>
 
 </html>
