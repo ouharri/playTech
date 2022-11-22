@@ -1,6 +1,6 @@
 <?php
-function supp($id, $nom ,$link1, $link2)
-{
+include "./component/script.php";
+function supp($id, $nom ,$link1, $link2){
 ?>
     <!-- Modal -->
     <div class="modal fade" id="<?=$id?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
