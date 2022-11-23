@@ -3,7 +3,6 @@ session_start();
 include "../admin/connection.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
-
 	function validate($data)
 	{
 		$data = trim($data);
@@ -11,12 +10,9 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 		$data = htmlspecialchars($data);
 		return $data;
 	}
-
 	$uname = validate($_POST['uname']);
 	$pass = validate($_POST['password']);
-	// echo $uname . $pass ;
 	// die();
-
 	if (empty($uname)) {
 		header("Location: index.php?error=User Name is required");
 		exit();
@@ -36,6 +32,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 				$_SESSION['mail_client'] = $row['mail_client'];
 				$_SESSION['name'] = $row['nom_client'];
 				$_SESSION['id'] = $row['id_user'];
+				$_SESSION['admin'] = $row['is_admin'];
 				header("Location: ../index.php");
 				exit();
 			} else {

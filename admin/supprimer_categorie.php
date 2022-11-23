@@ -9,6 +9,5 @@ $id = $_GET['id'];
 $req = mysqli_query($con, "DELETE FROM categorie WHERE id_categorie = $id");
 
 // redirection vers la page de gestion
-
 header("Location:../gestion.php?id=0");
 ?>

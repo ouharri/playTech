@@ -1,6 +1,7 @@
 <?php
 session_start();
-if (isset($_SESSION['name'])) {
+$_SESSION['page'] = 'gestion';
+if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
 
 ?>
     <!DOCTYPE html>
@@ -13,7 +14,7 @@ if (isset($_SESSION['name'])) {
 
         <!-- style css link  -->
         <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
-        <title>PlayTech</title>
+        <title>PlayTech - Gestion</title>
 
         <!-- google font  link-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +30,13 @@ if (isset($_SESSION['name'])) {
 
         <!-- sweet alert  -->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <!-- bootstrap link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- meta data include -->
+        <?php
+        include "./component/header.php"
+        ?>
     </head>
 
     <body>
@@ -43,18 +51,17 @@ if (isset($_SESSION['name'])) {
             $_SESSION['ajouterpd'] = '';
         }
         ?>
-
-
-        <section class="menu">
+        <section class="menu" id="intro">
             <?php
             include_once "./admin/afficher_categorie.php"
             ?>
-
             <?php
             include_once('./admin/afficher_produit.php');
             ?>
         </section>
-
+        <a href="#intro" class="sctrooL">
+            <i class='bx bxs-up-arrow-circle bx-md'></i>
+        </a>
         <?php
         include_once "./component/script.php"
         ?>
@@ -63,7 +70,8 @@ if (isset($_SESSION['name'])) {
     </html>
 <?php
 } else {
-    header("Location: ../index.php");
+    header("Location: ./connection");
     exit();
 }
+include_once "./component/footer.php"
 ?>

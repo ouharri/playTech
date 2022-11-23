@@ -20,7 +20,6 @@
     $sql = "SELECT * FROM categorie WHERE id_categorie = $id";
     $req = mysqli_query($con, $sql);
     $row = mysqli_fetch_assoc($req);
-
     //vérifier que le bouton ajouter a bien été cliqué
     if (isset($_POST['button'])) {
         //extraction des informations envoyé dans des variables par la methode POST

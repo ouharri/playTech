@@ -1,0 +1,81 @@
+  .ho {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    /* z-index: 2; */
+    transform-origin: right;
+    align-items: center;
+  }
+  .banner.active .content {
+    transform: scale(0);
+    transform-origin: left;
+  }
+
+  .banner.active .logo {
+    transform: scale(0);
+    transform-origin: left;
+  }
+  .banner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: center !important;
+    background-color: #f8f9ff !important;
+  }
+  .banner::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 14%;
+    width: 400px;
+    height: 350px;
+    background: #a5e7ea;
+    z-index: 1;
+    transition: 1s;
+  }
+  .banner.active::before {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #0a0a0a;
+  }
+  .banner::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: 100px;
+    width: 400px;
+    height: 350px;
+    background: #77365f;
+    z-index: 1;
+    transition: 1s;
+  }
+  .banner.active::after {
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #0a0a0a;
+  }
+  .banner.active .main {
+    transform: scale(0);
+    transform-origin: left;
+  }
+  @media (max-width: 991px) {
+    .banner::before {
+      top: 100px;
+      left: 0;
+      width: 200px;
+      height: 300px;
+    }
+    .banner::after {
+      bottom: 0;
+      right: 0;
+      width: 100px;
+      height: 200px;
+    }
+    .main {
+      flex-direction: column-reverse;
+    }
+  }

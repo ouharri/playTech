@@ -21,7 +21,7 @@
             <div class="cat_box">
                 <a class="cat_type" href="?id=<?= $row['id_categorie'] ?>">
                     <?= $row['svg_icon_categorie'] ?>
-                    <h6><?= $row['libelle'] ?></h6>
+                    <h6 class='hhhh'><?= $row['libelle'] ?></h6>
                 </a>
                 <div class="cat_box_icon">
                     <a href="./admin/modifier_categorie.php?id=<?= $row['id_categorie'] ?>"><i class='bx bxs-edit'></i></a>

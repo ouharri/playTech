@@ -1,9 +1,9 @@
 body {
-	background: #1690A7;
+	background: #b1d8fa;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	height: 95vh;
 	flex-direction: column;
 }
 
@@ -14,10 +14,11 @@ body {
 
 form {
 	width: 500px;
-	border: 2px solid #ccc;
+	border: 1px solid #ccc;
 	padding: 30px;
 	background: #fff;
 	border-radius: 15px;
+	filter: drop-shadow(1px 3px 100px rgba(0, 102, 255, 0.4));
 }
 
 h2 {
@@ -41,7 +42,7 @@ label {
 
 button {
 	float: right;
-	background: #555;
+	background: #0070d1;
 	padding: 10px 15px;
 	color: #fff;
 	border-radius: 5px;
@@ -66,14 +67,11 @@ h1 {
 }
 
 a {
-	float: right;
-	background: #555;
-	padding: 10px 15px;
-	color: #fff;
-	border-radius: 5px;
-	margin-right: 10px;
-	border: none;
+	font-size: 13px;
+	float: left;
+	color: #0070d1;
 	text-decoration: none;
+	padding: 10px;
 }
 a:hover{
 	opacity: .7;

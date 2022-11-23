@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <!-- boxicon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 

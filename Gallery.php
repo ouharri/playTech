@@ -1,3 +1,7 @@
+<?php
+session_start();
+$_SESSION['page'] = 'gallery';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +12,7 @@
 
     <!-- style css link  -->
     <link rel="stylesheet" href="./style/style.css?v=<?php echo time(); ?>">
-    <title>PlayTech</title>
+    <title>PlayTech - Shop</title>
 
     <!-- google font  link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +25,10 @@
 
     <!-- boxicon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-
+    <!-- meta data include -->
+    <?php
+    include "./component/header.php"
+    ?>
 </head>
 
 <body>
@@ -31,7 +37,7 @@
     include_once "./component/header.php"
     ?>
 
-    <section class="menu">
+    <section class="menu" id="intro">
         <div class="categorie-gallery">
             <?php
             // connexion a la base de donné
@@ -122,319 +128,13 @@
                 ?>
                 </div>
     </section>
-
-    <main class="gallery-pic">
-        <h3>it's your gaming store ENJOY</h3>
-    </main>
-
-    <div class="categorie-gallery">
-        <button>
-            <h6>cat1</h6>
-        </button>
-        <button>
-            <h6>cat2</h6>
-        </button>
-        <button>
-            <h6>cat3</h6>
-        </button>
-        <button>
-            <h6>cat4</h6>
-        </button>
-        <button>
-            <h6>cat5</h6>
-        </button>
-    </div>
-
-    <section class="menu">
-
-        <div class="mainText" id="platType">
-        </div>
-
-        <div class="menu-content" id='plat'>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="roW">
-                <img src="../image/download (1).jpg" alt="">
-                <div class="menu-text">
-                    <div class="menu-left">
-                        <h4>plat write</h4>
-                    </div>
-                    <div class="menu-right">
-                        <h5>65DH</h5>
-                        <input type="hidden" id="price" value="45">
-                        <input type="hidden" id="produit" value="plat write">
-                        <input type="hidden" id="id" value="1">
-                    </div>
-                </div>
-                <p>Lorem ipsum dolor sit amet conptatibus!</p>
-                <div class="foteerPlat">
-                    <div class="start">
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                        <a href=""><i class='bx bxs-star'></i></a>
-                    </div>
-                    <div class="addPlat">
-                        <i class='bx bx-plus-circle bx-sm add-cart'></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a href="#intro" class="sctrooL">
+        <i class='bx bxs-up-arrow-circle bx-md'></i>
+    </a>
     <?php
-    include_once "./component/script.php"
+    include_once "./component/footer.php";
+
+    include_once "./component/script.php";
     ?>
 </body>
 

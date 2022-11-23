@@ -15,6 +15,5 @@ $id_cat = $row['id_categorie'];
 $req = mysqli_query($con, "DELETE FROM produit WHERE id_produit = $id");
 
 // redirection vers la page de gestion
-
 header("Location:../gestion.php?id=$id_cat");
 ?>
