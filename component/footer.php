@@ -13,27 +13,30 @@
         </svg>
         </a>
         <br>
-        <h6>Notre mission primordiale est la satisfaction de notre clientèle. Nous essayons de créer un menu diversifié
-            tout en tenant compte de la fraicheur et la qualité des ingrédients.
+        <br>
+        <h6>
+            <br>
+            <br>
+            Pour acheter vos cartes cadeau ou jeux, vous avez la possibilité de payer avec plusieurs moyens de paiement, par virement bancaire chez plusieurs banques ou par transfert d'argent.
         </h6>
     </div>
     <div class="weDo">
         <h4><br>What We Do</h4>
-        <li>Restaurant Tendance</li>
-        <li>Restaurant de Poisson</li>
-        <li>Restaurant International</li>
-        <li>Restaurant Italien</li>
-        <li>Restaurant Asiatique</li>
-        <li>Restaurant Japonais</li>
+        <li> Tendance</li>
+        <li>gaming store clavier </li>
+        <li>gaming store souris</li>
+        <li>gaming store manettes </li>
+        <li>gaming store tablets</li>
+        <li>gaming store pc</li>
     </div>
     <div class="Ser">
         <h4><br>Service</h4>
-        <li>Air conditionné</li>
-        <li>Ambiance musicale</li>
-        <li>Cave climatisée</li>
-        <li>Cheminée</li>
-        <li>Parking - Voiturier</li>
-        <li>Réservations</li>
+        <li>card cadeau</li>
+        <li>livraison</li>
+        <li>montions</li>
+        <li>newsletter</li>
+        <li> cadeaux</li>
+        <li>offres</li>
     </div>
     <div class="Con">
         <h4><br>Contact</h4>
