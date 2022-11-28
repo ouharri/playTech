@@ -30,9 +30,7 @@ $_SESSION['page'] = 'home';
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <!-- meta data include -->
-    <?php
-    include "./component/header.php"
-    ?>
+
 </head>
 
 <body>
@@ -54,32 +52,62 @@ $_SESSION['page'] = 'home';
         </main>
     </section>
 
-    <!-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="./image/back-img/call-of-duty-warzone-update-2-keyart-en-01-03nov22.webp" alt="First slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/back-img/sonic-frontiers-keyart-01-ps4-ps5-25aug22$en.webp" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="./image/back-img/spider-man-miles-morales-PC-keyart-26oct22.webp" alt="Third slide">
-            </div>
+
+    <section id="feature">
+        <div class="fe-box">
+            <img src="image/feature/free-shipping.png" alt="image">
+            <h6>free shipping</h6>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div> -->
+        <div class="fe-box">
+            <img src="image/feature/24-7.png" alt="image">
+            <h6>24/7 support</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/feature/save-money.png" alt="image">
+            <h6>Save money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/feature/mobile-order.png" alt="image">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/feature/promotions.png" alt="image">
+            <h6>promotions</h6>
+        </div>
+        <div class="fe-box">
+            <img src="image/feature/happy.png" alt="image">
+            <h6>Happy Sell</h6>
+        </div>
+    </section>
+
+    <!-- <div class="sideR">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="./image/back-img/call-of-duty-warzone-update-2-keyart-en-01-03nov22.webp" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./image/back-img/sonic-frontiers-keyart-01-ps4-ps5-25aug22$en.webp" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="./image/back-img/spider-man-miles-morales-PC-keyart-26oct22.webp" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        </div> -->
 
 
 
@@ -88,7 +116,7 @@ $_SESSION['page'] = 'home';
             <img src="./image/back-img/manadger.png" alt="">
         </div>
         <div class="blabla">
-            <h2>nous somme toujours pour votre service</h2>
+            <h2>Nous pouvons toujours endendez votre voie</h2>
             <a href="./html/contact.html"><button>contact</button></a>
         </div>
     </div>

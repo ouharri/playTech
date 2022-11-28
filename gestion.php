@@ -2,7 +2,6 @@
 session_start();
 $_SESSION['page'] = 'gestion';
 if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
-
 ?>
     <!DOCTYPE html>
     <html lang="en">

@@ -46,6 +46,6 @@
 <!-- </footer> -->
 <div class="lastText">
     <p>
-        Copyright © 2022 by outman.ouharri
+        Copyright © 2022 by outman.ouharri && nezha.lemnissir
     </p>
 </div>
