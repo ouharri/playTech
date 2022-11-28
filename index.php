@@ -44,7 +44,7 @@ $_SESSION['page'] = 'home';
             <div class="home-text">
                 <h1>GAMING <br>STORE</h1>
                 <h5>votre meilleure endroit gaming</h5>
-                <a href="#" class="home-btn">Shop Now</a>
+                <a href="./Gallery.php?id=0" class="home-btn">Shop Now</a>
             </div>
             <div class="home-img">
                 <img src="./image/home-img/4.png" alt="">
@@ -117,7 +117,7 @@ $_SESSION['page'] = 'home';
         </div>
         <div class="blabla">
             <h2>Nous pouvons toujours endendez votre voie</h2>
-            <a href="./html/contact.html"><button>contact</button></a>
+            <a href="./contact.PHP"><button>contact</button></a>
         </div>
     </div>
 

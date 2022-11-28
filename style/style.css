@@ -91,6 +91,7 @@ body {
   height: 70vh;
 }
 .categorie-gallery {
+  justify-content: center;
   padding-top: 110px;
   padding-bottom: 20px;
   display: flex;
