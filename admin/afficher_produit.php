@@ -1,6 +1,6 @@
 <?php
 include_once "connection.php";
-// récupération de l'id de produit a partire de lien
+// récupération de l'id de categorie a partire de lien
 $id = $_GET['id'];
 // requette pour afficher la liste des produit
 if ($id != 0) {
@@ -54,7 +54,7 @@ if ($id != 0) {
                     <div class="foteerPlat">
                         <div class="addPlat">
                             <a href="./admin/modifier_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-edit'></i></a>
-                            <a href="./admin/supprimer_produit.php?id=<?= $row['id_produit'] ?>" onclick="return checkdelet()"><i class='bx bxs-trash-alt'></i></a>
+                            <a href="./admin/supprimer_produit.php?id=<?= $row['id_produit'] ?>" onclick="return checkdelet('<?= $row['libelle_produit'] ?>')"><i class='bx bxs-trash-alt'></i></a>
                         </div>
                     </div>
                 </div>
@@ -64,8 +64,3 @@ if ($id != 0) {
         include "./component/script.php";
         ?>
         </div>
-        <script>
-            function checkdelet() {
-                return confirm('vous etes sure de suprimer');
-            }
-        </script>

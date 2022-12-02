@@ -40,6 +40,8 @@ $_SESSION['page'] = 'gallery';
     <section class="menu" id="intro">
         <div class="categorie-gallery">
             <?php
+            // récupération de l'id de produit a partire de lien
+            $id = $_GET['id'];
             // connexion a la base de donné
             include_once "./admin/connection.php";
             // requette pour afficher la liste des CATEGORIE
@@ -48,7 +50,7 @@ $_SESSION['page'] = 'gallery';
                 // 
             } else {
             ?>
-                <div class="cat_box" style="justify-content: center;">
+                <div class="cat_box <?php if ($id == 0) echo 'active' ?>" style="justify-content: center;">
                     <a href="?id=0">
                         <h6>All</h6>
                     </a>
@@ -56,7 +58,7 @@ $_SESSION['page'] = 'gallery';
                 <?php
                 while ($row = mysqli_fetch_assoc($req)) {
                 ?>
-                    <div class="cat_box cart_Box" style="justify-content: center;">
+                    <div class="cat_box <?php if ($id == $row['id_categorie']) echo 'active' ?>" style="justify-content: center;">
                         <a class="cat_type" href="?id=<?= $row['id_categorie'] ?>">
                             <?= $row['svg_icon_categorie'] ?>
                             <h6><?= $row['libelle'] ?></h6>
@@ -68,8 +70,6 @@ $_SESSION['page'] = 'gallery';
             ?>
         </div>
         <?php
-        // récupération de l'id de produit a partire de lien
-        $id = $_GET['id'];
         // requette pour afficher la liste des produit
         if ($id != 0) {
             $req = mysqli_query($con, "SELECT * FROM `produit` WHERE produit.id_categorie = $id;");
@@ -118,7 +118,7 @@ $_SESSION['page'] = 'gallery';
                             <p><?= $row['desc_produit'] ?></p>
                             <div class="foteerPlat">
                                 <div class="addPlat">
-                                    .
+                                    <i class='bx bx-plus-circle bx-sm'></i>
                                 </div>
                             </div>
                         </div>

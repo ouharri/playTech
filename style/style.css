@@ -125,7 +125,6 @@ body {
 }
 a:hover {
   text-decoration: none;
-  text-decoration: none;
 }
 h6 {
   margin: 0px !important;
@@ -143,6 +142,8 @@ h6 {
   color: var(--bg-color);
   display: flex;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 .categorie-gallery a svg {
   font-size: 10px;
@@ -173,7 +174,7 @@ h6 {
 }
 
 .menu .mainText p {
-  color: #84813b;
+  color: #6dadb0;
   font-size: 17px;
   opacity: 0.8;
 }
@@ -263,7 +264,7 @@ input#add_img_input {
 }
 
 .roW p {
-  color: #84813b;
+  color: #6dadb0;
   font-size: 13px;
   list-style: 30px;
   margin-bottom: 15px;
@@ -307,9 +308,13 @@ input#add_img_input {
 .foteerPlat .addPlat .bxs-trash-alt {
   color: #ff3d00;
 }
+.foteerPlat .addPlat .bx-plus-circle {
+  color: #985881;
+}
 
 .foteerPlat .addPlat .bxs-edit:hover,
-.foteerPlat .addPlat .bxs-trash-alt:hover {
+.foteerPlat .addPlat .bxs-trash-alt:hover,
+.foteerPlat .addPlat .bx-plus-circle:hover {
   color: green;
 }
 /* feature */
