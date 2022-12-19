@@ -99,7 +99,7 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
                     ?>
                 </select>
                 <label>image</label>
-                <input id="add_img_input" name='image' type="file" accept="image/png, image/jpg, image/gif, image/jpeg" />
+                <input id="add_img_input" name='image' type="file" accept="image/png, image/jpg, image/gif, image/jpeg" required/>
                 <input type="submit" value="Ajouter" name="button">
             </form>
         </div>

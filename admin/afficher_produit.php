@@ -51,7 +51,11 @@ if ($id != 0) {
                         </div>
                     </div>
                     <p><?= $row['desc_produit'] ?></p>
+
                     <div class="foteerPlat">
+                        <div class="start">
+                            <h6 style="font-size: 12px;">quantité: <strong><?=$row['quantite_produit']?> </strong></h6>
+                        </div>
                         <div class="addPlat">
                             <a href="./admin/modifier_produit.php?id=<?= $row['id_produit'] ?>"><i class='bx bxs-edit'></i></a>
                             <a href="./admin/supprimer_produit.php?id=<?= $row['id_produit'] ?>" onclick="return checkdelet('<?= $row['libelle_produit'] ?>')"><i class='bx bxs-trash-alt'></i></a>

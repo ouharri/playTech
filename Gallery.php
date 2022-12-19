@@ -116,7 +116,7 @@ $_SESSION['page'] = 'gallery';
                                 </div>
                             </div>
                             <p><?= $row['desc_produit'] ?></p>
-                            <div class="foteerPlat">
+                            <div class="foteerPlat" style="justify-content: flex-end !important;">
                                 <div class="addPlat">
                                     <i class='bx bx-plus-circle bx-sm'></i>
                                 </div>
