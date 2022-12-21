@@ -76,13 +76,13 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
             </p>
             <form action="#" method="POST" enctype="multipart/form-data">
                 <label>Nom</label>
-                <input type="text" name="nom" value="<?= $row['libelle_produit'] ?>">
+                <input type="text" name="nom" value="<?= $row['libelle_produit'] ?>" required>
                 <label>descrpiption</label>
-                <input type="text" name="desc" value="<?= $row['desc_produit'] ?>">
+                <input type="text" name="desc" value="<?= $row['desc_produit'] ?>" required>
                 <label>prix</label>
-                <input type="text" name="prix" value="<?= $row['price_produit'] ?>">
+                <input type="number" step="any" name="prix" value="<?= $row['price_produit'] ?>" min=0.1 required>
                 <label>quantité</label>
-                <input type="number" name="quantite" value="<?= $row['quantite_produit'] ?>">
+                <input type="number" name="quantite" value="<?= $row['quantite_produit'] ?>" min=1 required>
                 <label>categorie</label>
                 <select name="categorie">
                     <?php

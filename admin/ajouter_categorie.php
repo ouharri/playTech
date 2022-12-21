@@ -23,10 +23,12 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
         if (isset($_POST['button'])) {
             //extraction des informations envoyé dans des variables par la methode POST
             extract($_POST);
+
             if (isset($nom) && isset($desc)) {
+                if( !empty($icon) ) $icon = `<i class='bx bx-error-circle'></i>`;
                 //requête d'ajout
                 $sql = "INSERT INTO `categorie` (`libelle`, `desc_categorie`, `svg_icon_categorie`) VALUES 
-            ('" .  addslashes($nom) . "'," . "'" .  addslashes($desc) . "'," . "'" .  addslashes($icon) . "')";
+            ('" .  addslashes($nom) . "'," . "'" .  addslashes($desc) . "'," . "'" .  addslashes(htmlentities($icon)) . "')";
                 $req = mysqli_query($con, $sql);
                 if ($req) {
                     //si la requête a été effectuée avec succès , on fait une redirection
@@ -51,7 +53,7 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
             }
         }
         ?>
-        <div class="form">
+        <div class="form" >
             <a href="../gestion.php?id=0" class="back_btn"><i class='bx bx-arrow-back'></i></a>
             <h2>Ajouter une categorie</h2>
             <p class="erreur_message">
@@ -61,6 +63,7 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
                     echo $message;
                 }
                 ?>
+                
             </p>
             <form enctype="multipart/form-data" action="" method="POST">
                 <label>Nom</label>

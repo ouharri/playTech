@@ -35,7 +35,7 @@
                 <li><a href="./gallery.php?id=0">Shop</a></li>
             <?php
             }
-            if ($_SESSION['page'] == 'about') {
+            /*if ($_SESSION['page'] == 'about') {
             ?>
                 <li><a class="active" href="./about.php">About</a></li>
             <?php
@@ -52,7 +52,7 @@
             ?>
                 <li><a href="./contact.php">Contact</a></li>
                 <?php
-            }
+            }*/
             if (isset($_SESSION['name']) && $_SESSION['admin']==1) {
                 if ($_SESSION['page'] == 'gestion') {
                 ?>

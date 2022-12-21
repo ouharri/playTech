@@ -73,9 +73,9 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
                 <label>descrpiption</label>
                 <input type="text" name="desc" required>
                 <label>prix</label>
-                <input type="text" name="prix" required>
+                <input type="number" step="any" min=0.1 type="text" name="prix" required>
                 <label>quantité</label>
-                <input type="number" name="quantite" required>
+                <input  type="number" name="quantite" min=1 required>
                 <label>categorie</label>
                 <select name="categorie" id="">
                     <?php
