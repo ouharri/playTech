@@ -30,7 +30,7 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
             //extraction des informations envoyé dans des variables par la methode POST
             extract($_POST);
             if (isset($nom) && isset($desc)) {
-                if( !empty($icon) ) $icon = `<i class='bx bx-error-circle'></i>`;
+                if( empty($icon) ) $icon = `<i class='bx bx-error-circle'></i>`;
                 //requête d'ajout
                 $sql = "UPDATE `categorie` SET `libelle` = " . "'" .  addslashes($nom) . "', `desc_categorie` = " . "'" .  addslashes($desc) . "', `svg_icon_categorie` = " . "'" .  addslashes($icon) . "' WHERE `categorie`.`id_categorie` = $id";
                 $req = mysqli_query($con, $sql);
@@ -72,10 +72,10 @@ if (isset($_SESSION['name']) && $_SESSION['admin'] == 1) {
                 <label>Nom</label>
                 <input type="text" name="nom" value="<?= htmlentities($row['libelle']) ?>" required>
                 <label>descrpiption</label>
-                <input type="text" name="desc" value="<?= $row['desc_categorie'] ?>" require>
+                <input type="text" name="desc" value="<?= $row['desc_categorie'] ?>" required>
                 <label>logo<small> ( svg or icone )</small></label>
                 <div class="svg_update">
-                    <input type="text" name="icon" value="<?= $row['svg_icon_categorie']?>" required></input>
+                    <input type="text" name="icon" value="<?=htmlentities($row['svg_icon_categorie'])?>" required></input>
                     <?= $row['svg_icon_categorie'] ?>
                 </div>
                 <input type="submit" value="Modifier" name="button">
