@@ -1,8 +1,12 @@
 # gaming-store-fullstack-website
 
+![img.png](image/img.png)
+
 Contexte du projet
 PlayTech est un magasin spécialisé en gaming, ils veulent renforcer leur image grâce à leur nouveau site web.
+​
 
+![img.png](image/img2.png)
 ​
 
 concevoir une conception UML de votre site web qui va englober les 3 parties (Diagramme de cas d'utilisation , Diagramme de classe , Diagramme de séquence ).
